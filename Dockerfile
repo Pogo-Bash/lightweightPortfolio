@@ -35,6 +35,10 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Create data directory for SQLite
 RUN mkdir -p /opt/api/data
 
+# Entrypoint script patches nginx port then starts supervisord
+COPY docker-entrypoint-override.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+
 EXPOSE 80
 
-CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["/usr/local/bin/start.sh"]
