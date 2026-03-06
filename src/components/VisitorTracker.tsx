@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import SwapName from "./SwapName";
 
-const API_URL = import.meta.env.PUBLIC_API_URL || "http://localhost:3000";
+const API_URL = import.meta.env.PUBLIC_API_URL || "";
 
 export default function VisitorTracker() {
   const [count, setCount] = useState<number>(0);
