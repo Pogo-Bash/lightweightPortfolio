@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import VisitorTracker from "../components/VisitorTracker";
+---
+
+<Layout title="Swap">
+  <main class="min-h-screen flex flex-col items-center justify-center px-4">
+    <!-- Three.js Swap name with visitor counter -->
+    <section class="w-full max-w-3xl mx-auto">
+      <VisitorTracker client:load />
+    </section>
+
+    <!-- Tagline -->
+    <p class="mt-6 font-mono text-swap-dim text-sm tracking-wider text-center">
+      hover over the name
+    </p>
+
+    <!-- Tech stack badges -->
+    <section class="mt-16 max-w-2xl mx-auto">
+      <div class="flex flex-wrap gap-2 justify-center">
+        {[
+          "Kubernetes", "Docker", "Astro", "React", "TypeScript",
+          "Three.js", "Bun", "Hono", "PostgreSQL", "Redis",
+          "Terraform", "ArgoCD", "Prometheus", "Grafana"
+        ].map((tech) => (
+          <span class="px-3 py-1 text-xs font-mono border border-swap-dim/30 rounded-full text-swap-dim hover:text-swap-accent hover:border-swap-accent/50 transition-colors duration-300">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-8 text-center">
+      <p class="font-mono text-swap-dim/50 text-xs">
+        built with too many linters
+      </p>
+    </footer>
+  </main>
+</Layout>
