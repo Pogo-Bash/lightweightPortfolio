@@ -13,6 +13,17 @@ app.use(
   })
 );
 
+// Rate limiting: 1 request per second per IP
+const rateLimit = new Map<string, number>();
+app.use("/api/*", async (c, next) => {
+  const ip = getClientIp(c);
+  const now = Date.now();
+  const last = rateLimit.get(ip) || 0;
+  if (now - last < 1000) return c.json({ error: "rate limited" }, 429);
+  rateLimit.set(ip, now);
+  await next();
+});
+
 // Extract client IP from headers (supports proxies like Cloudflare, nginx)
 function getClientIp(c: { req: { header: (name: string) => string | undefined } }): string {
   return (
