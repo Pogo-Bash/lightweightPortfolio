@@ -1,0 +1,23 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Oracle
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ${{ secrets.ORACLE_USER }}
+          password: ${{ secrets.ORACLE_PASSWORD }}
+          script: |
+            cd ~/lightweightPortfolio
+            git pull
+            docker build -t swap-portfolio .
+            docker stop swap-portfolio || true
+            docker rm swap-portfolio || true
+            docker run -d --name swap-portfolio -p 80:80 swap-portfolio
