@@ -1,21 +1,19 @@
 ---
-title: "Getting into Computational Biology"
-description: "How I went from web dev to reading papers about sequence alignment at 2am."
+title: "Lorem Ipsum Dolor Sit Amet"
+description: "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 date: 2026-03-10
 ---
 
-I never expected to end up here. A year ago I was building CRUD apps and arguing about whether Tailwind is real CSS. Now I'm reading papers about sequence alignment algorithms and trying to understand what a BLAST score actually means.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-## The rabbit hole
+## Duis aute irure
 
-It started when I stumbled across a bioinformatics challenge online. The idea that you could write code to analyze DNA sequences — actual biological data — felt like a completely different kind of problem solving compared to "make the button blue."
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## What I've learned so far
+## Sed ut perspiciatis
 
-- **Biology is messy.** Unlike a REST API, genomes don't follow a spec. There's no schema. It's chaos that somehow works.
-- **The tooling is... interesting.** Half the field runs on Python scripts from 2009 and the other half is in R. There's room to build better stuff.
-- **It matters.** This isn't another todo app. The output can actually help people.
+- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+- Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+- Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
 
-## What's next
-
-I'm working on a lung sequencing analyzer right now. It's rough, but it's teaching me more than any tutorial ever could. More on that soon.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.

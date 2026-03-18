@@ -1,23 +1,17 @@
 ---
-title: "Homelab Notes: Docker, Mistakes, and DNS"
-description: "A running log of things I've learned from running my own infrastructure."
+title: "Excepteur Sint Occaecat"
+description: "Cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum."
 date: 2026-02-20
 ---
 
-I've been running a homelab for a while now. Here are some things I wish someone told me earlier.
+Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
 
-## DNS will always be the problem
+## Temporibus autem
 
-It doesn't matter what's broken. The answer is DNS. I've spent more hours debugging DNS than any other single thing in my life. Set up Pi-hole early and save yourself the pain.
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
 
-## Docker Compose is your friend
+## Nam libero tempore
 
-Stop writing raw `docker run` commands with 15 flags. Write a `docker-compose.yml`, commit it to a repo, and move on. Future you will thank present you.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
 
-## Backups aren't optional
-
-I lost a Postgres database once because I thought "it's just a homelab, who cares." Turns out I cared a lot when two weeks of config was gone. Now everything gets backed up to a second drive automatically.
-
-## Start small
-
-You don't need Kubernetes at home. You need a single machine running Docker with a reverse proxy. Scale when you actually need to, not when Hacker News tells you to.
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.

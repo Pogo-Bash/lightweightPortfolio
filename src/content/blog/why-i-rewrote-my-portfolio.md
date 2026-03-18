@@ -1,25 +1,17 @@
 ---
-title: "Why I Rewrote My Portfolio (Again)"
-description: "Less Three.js, more substance. Sometimes simpler is better."
+title: "Ut Enim Ad Minim Veniam"
+description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 date: 2026-03-18
 ---
 
-My old portfolio had a 3D animated name, a particle system, a visitor counter with its own API and database, and a grid background that subtly glowed green.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
-It was cool. It was also completely useless.
+## Nemo enim ipsam
 
-## The problem
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 
-Nobody visiting my portfolio cared about my Three.js skills. They wanted to know who I am, what I've built, and how to reach me. Instead they got a loading spinner while 200KB of JavaScript figured out how to render my name in 3D.
+## At vero eos
 
-## The fix
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
 
-Strip it all out. Astro, Tailwind, static HTML. No React. No Three.js. No visitor counter. No API. Just text on a page that loads instantly and actually tells you something.
-
-## Lessons
-
-- **If your portfolio needs a loading screen, you've gone too far.**
-- Ship something that works for the person reading it, not the person who built it.
-- You can always add complexity later. You can rarely remove it gracefully.
-
-The source is on [GitHub](https://github.com/Pogo-Bash/lightweightPortfolio) if you want to see what "simple" looks like.
+Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
