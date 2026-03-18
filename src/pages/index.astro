@@ -56,6 +56,42 @@ import Layout from "../layouts/Layout.astro";
       copied to clipboard!
     </p>
   </section>
+
+  <!-- Buttons -->
+  <section class="mt-16">
+    <div class="flex flex-wrap gap-1">
+      {[
+        { src: "coffee.gif", alt: "coffee" },
+        { src: "coffeecup.gif", alt: "coffee cup" },
+        { src: "gf.gif", alt: "girlfriend" },
+        { src: "5amgirlfriend.gif", alt: "5am girlfriend" },
+        { src: "love.gif", alt: "love" },
+        { src: "heart.gif", alt: "heart" },
+        { src: "javascript.gif", alt: "javascript" },
+        { src: "html5.png", alt: "html5" },
+        { src: "css.gif", alt: "css" },
+        { src: "code.gif", alt: "code" },
+        { src: "discord.gif", alt: "discord" },
+        { src: "linux.gif", alt: "linux" },
+        { src: "archlinux.gif", alt: "arch linux" },
+        { src: "gnu-linux.gif", alt: "gnu/linux" },
+        { src: "vim.gif", alt: "vim" },
+        { src: "neovim.gif", alt: "neovim" },
+        { src: "www.gif", alt: "www" },
+        { src: "best_viewed_with_open_eyes.gif", alt: "best viewed with open eyes" },
+        { src: "catscape3.gif", alt: "catscape" },
+      ].map((btn) => (
+        <img
+          src={`https://88x31.nl/gifs/${btn.src}`}
+          alt={btn.alt}
+          width="88"
+          height="31"
+          loading="lazy"
+          class="image-rendering-pixelated"
+        />
+      ))}
+    </div>
+  </section>
 </Layout>
 
 <script>
