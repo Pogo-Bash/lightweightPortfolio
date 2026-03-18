@@ -1,6 +1,7 @@
 node_modules
-api/node_modules
-api/data
+dist
+.astro
 .git
-*.md
 .env*
+*.md
+*.db

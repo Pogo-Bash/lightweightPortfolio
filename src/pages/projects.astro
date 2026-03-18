@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const projects = [
+  {
+    name: "Eureka",
+    description: "An adaptive learning platform for elementary through high school students — personalized, accessible education for every learner.",
+    tech: ["TypeScript", "React"],
+    url: "https://github.com/Pogo-Bash/Eureka",
+  },
+  {
+    name: "webP2P",
+    description: "Peer-to-peer communication built for the web. Real-time data exchange without a central server.",
+    tech: ["Vue", "WebRTC"],
+    url: "https://github.com/Pogo-Bash/webP2P",
+  },
+  {
+    name: "lungseq-analyzer",
+    description: "Bioinformatics tool for analyzing lung sequencing data. Computational biology meets practical tooling.",
+    tech: ["JavaScript"],
+    url: "https://github.com/Pogo-Bash/lungseq-analyzer",
+  },
+  {
+    name: "CongressionalAppChallenge2025",
+    description: "Submission for the 2025 Congressional App Challenge.",
+    tech: ["JavaScript"],
+    url: "https://github.com/Pogo-Bash/CongressionalAppChallenge2025",
+  },
+];
+---
+
+<Layout title="Projects — Swap">
+  <h1 class="text-2xl font-bold text-text mb-2">projects</h1>
+  <p class="text-subtext0 mb-10">stuff i've built or am building.</p>
+
+  <div class="space-y-6">
+    {projects.map((project) => (
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noopener"
+        class="block p-5 border border-surface0 rounded-lg hover:border-mauve/40 transition-all duration-200 group"
+      >
+        <div class="flex items-start justify-between mb-2">
+          <h2 class="font-bold text-text group-hover:text-mauve transition-colors">
+            {project.name}
+          </h2>
+          <svg class="w-4 h-4 text-overlay0 group-hover:text-mauve transition-colors mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
+        </div>
+        <p class="text-sm text-subtext0 mb-3">{project.description}</p>
+        <div class="flex gap-2">
+          {project.tech.map((t) => (
+            <span class="text-xs px-2 py-0.5 rounded bg-surface0 text-subtext0">{t}</span>
+          ))}
+        </div>
+      </a>
+    ))}
+  </div>
+</Layout>

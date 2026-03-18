@@ -4,8 +4,8 @@
 
 @layer base {
   html {
-    @apply bg-swap-bg text-swap-text antialiased;
-    font-family: "JetBrains Mono", "Fira Code", monospace;
+    @apply bg-crust text-text antialiased;
+    font-family: "JetBrains Mono", monospace;
   }
 
   body {
@@ -13,35 +13,38 @@
   }
 
   ::selection {
-    @apply bg-swap-accent/20 text-swap-accent;
+    @apply bg-mauve/20 text-mauve;
   }
 
-  /* Scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #0a0a0a;
+    background: #11111b;
   }
   ::-webkit-scrollbar-thumb {
-    background: #333;
+    background: #313244;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #00ff88;
+    background: #cba6f7;
   }
 }
 
 @layer components {
-  .glow-text {
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3),
-                 0 0 20px rgba(0, 255, 136, 0.1);
+  .discord-btn {
+    position: relative;
+    overflow: hidden;
   }
-
-  .grid-bg {
-    background-image:
-      linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
+  .discord-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(203, 166, 247, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+  .discord-btn:hover::before {
+    transform: translateX(100%);
   }
 }

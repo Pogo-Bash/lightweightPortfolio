@@ -8,7 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Oracle
+      - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.ORACLE_HOST }}
@@ -20,4 +20,4 @@ jobs:
             docker build -t swap-portfolio .
             docker stop swap-portfolio || true
             docker rm swap-portfolio || true
-            docker run -d --name swap-portfolio -p 80:80 swap-portfolio
+            docker run -d --name swap-portfolio --restart unless-stopped -p 80:80 swap-portfolio

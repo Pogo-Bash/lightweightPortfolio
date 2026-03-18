@@ -1,9 +1,17 @@
 ---
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "Swap — Full-stack developer interested in computational biology" } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: "/", label: "home" },
+  { href: "/projects", label: "projects" },
+  { href: "/blog", label: "blog" },
+];
 ---
 
 <!doctype html>
@@ -11,7 +19,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Swap - Software Engineer Portfolio" />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,8 +29,39 @@ const { title } = Astro.props;
     />
     <title>{title}</title>
   </head>
-  <body class="grid-bg">
-    <slot />
+  <body class="flex flex-col min-h-screen">
+    <nav class="border-b border-surface0 px-6 py-4">
+      <div class="max-w-2xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-mauve font-bold text-lg hover:text-lavender transition-colors">
+          swap
+        </a>
+        <div class="flex gap-6 text-sm">
+          {navLinks.map((link) => (
+            <a
+              href={link.href}
+              class:list={[
+                "transition-colors",
+                currentPath === link.href || (link.href !== "/" && currentPath.startsWith(link.href))
+                  ? "text-mauve"
+                  : "text-overlay1 hover:text-text",
+              ]}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-1 max-w-2xl mx-auto w-full px-6 py-12">
+      <slot />
+    </main>
+
+    <footer class="border-t border-surface0 px-6 py-6">
+      <div class="max-w-2xl mx-auto text-center text-xs text-overlay0">
+        built with astro & bad decisions
+      </div>
+    </footer>
   </body>
 </html>
 

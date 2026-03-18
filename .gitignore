@@ -1,8 +1,7 @@
 node_modules/
 dist/
 .astro/
-api/data/
-api/node_modules/
 .env
 .env.*
 *.db
+.DS_Store

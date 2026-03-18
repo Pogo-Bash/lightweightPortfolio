@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={`${post.data.title} — Swap`}>
+  <a href="/blog" class="text-sm text-overlay1 hover:text-mauve transition-colors mb-8 inline-block">
+    &larr; back to blog
+  </a>
+
+  <article>
+    <time class="text-xs text-overlay0">
+      {post.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+    </time>
+    <h1 class="text-3xl font-bold text-text mt-2 mb-8">{post.data.title}</h1>
+
+    <div class="prose prose-invert prose-sm max-w-none
+      [&>p]:text-subtext1 [&>p]:leading-relaxed [&>p]:mb-4
+      [&>h2]:text-text [&>h2]:font-bold [&>h2]:text-lg [&>h2]:mt-8 [&>h2]:mb-3
+      [&>h3]:text-text [&>h3]:font-bold [&>h3]:mt-6 [&>h3]:mb-2
+      [&>ul]:text-subtext1 [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-4
+      [&>ol]:text-subtext1 [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-4
+      [&>code]:text-mauve [&>code]:bg-surface0 [&>code]:px-1.5 [&>code]:py-0.5 [&>code]:rounded [&>code]:text-sm
+      [&>pre]:bg-mantle [&>pre]:border [&>pre]:border-surface0 [&>pre]:rounded-lg [&>pre]:p-4 [&>pre]:mb-4 [&>pre]:overflow-x-auto
+      [&>pre>code]:bg-transparent [&>pre>code]:p-0
+      [&>blockquote]:border-l-2 [&>blockquote]:border-mauve [&>blockquote]:pl-4 [&>blockquote]:text-subtext0 [&>blockquote]:italic
+      [&>a]:text-mauve [&>a]:underline [&>a]:underline-offset-2 hover:[&>a]:text-lavender
+    ">
+      <Content />
+    </div>
+  </article>
+</Layout>
