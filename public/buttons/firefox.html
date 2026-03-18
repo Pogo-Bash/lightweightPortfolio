@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Firefox 88x31</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 88px;
+    height: 31px;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .btn {
+    width: 88px;
+    height: 31px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    background: #0d0822;
+    border: 1px solid #1e1840;
+  }
+
+  .ff-left {
+    width: 31px;
+    flex-shrink: 0;
+    background: #0d0822;
+    border-right: 1px solid #1e1840;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ff-grid {
+    display: grid;
+    grid-template-columns: repeat(22, 1px);
+    grid-template-rows: repeat(22, 1px);
+    image-rendering: pixelated;
+    transform: scale(1.3);
+    transform-origin: center center;
+  }
+  .ff-grid div { width:1px; height:1px; background: transparent; }
+
+  .ff-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5px;
+  }
+  .ff-right span {
+    font-family: 'Press Start 2P', monospace;
+    line-height: 1;
+    display: block;
+  }
+  .ff-right .f1 { font-size: 5.5px; color: #ff7700; text-shadow: 1px 1px 0 #6a2d00; }
+  .ff-right .f2 { font-size: 4px; color: #ffaa44; letter-spacing: 0.3px; }
+</style>
+</head>
+<body>
+<div class="btn">
+  <div class="ff-left">
+    <div class="ff-grid">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div style="background:#fffd04"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div style="background:#0a07da"></div><div style="background:#0707cb"></div><div style="background:#137ded"></div><div style="background:#1886dd"></div><div style="background:#dff85c"></div><div style="background:#feff01"></div><div style="background:#fcfc20"></div><div style="background:#e3823e"></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div style="background:#ff3a00"></div><div></div><div style="background:#0a0597"></div><div style="background:#0101f7"></div><div style="background:#0003e8"></div><div style="background:#0687ff"></div><div style="background:#1184ff"></div><div style="background:#0586fe"></div><div style="background:#f8ff04"></div><div style="background:#ffff00"></div><div style="background:#fffe01"></div><div style="background:#fff40c"></div><div style="background:#fff7bf"></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div style="background:#d478fd"></div><div style="background:#ff450c"></div><div style="background:#b3334c"></div><div style="background:#0001c6"></div><div style="background:#c13b6d"></div><div style="background:#fa4206"></div><div style="background:#0300f1"></div><div style="background:#0282fd"></div><div style="background:#008ff0"></div><div style="background:#fdfe0a"></div><div style="background:#fffd03"></div><div style="background:#ffff00"></div><div style="background:#ffff01"></div><div style="background:#ffd50c"></div><div style="background:#ffffdc"></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div style="background:#d53072"></div><div style="background:#e218a8"></div><div style="background:#ff4300"></div><div style="background:#f94800"></div><div style="background:#ff3f04"></div><div style="background:#2a00ab"></div><div style="background:#276eff"></div><div style="background:#257eff"></div><div style="background:#008ef4"></div><div style="background:#dcff66"></div><div style="background:#fffb00"></div><div style="background:#fffe03"></div><div style="background:#fffe00"></div><div style="background:#feff01"></div><div style="background:#ffff95"></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div style="background:#9f1cb6"></div><div style="background:#ff4900"></div><div style="background:#fd4401"></div><div style="background:#ff4400"></div><div style="background:#ff8310"></div><div style="background:#f64b05"></div><div style="background:#0604e3"></div><div style="background:#0000f2"></div><div style="background:#0093f9"></div><div style="background:#dcfa80"></div><div style="background:#fffd01"></div><div style="background:#fff201"></div><div style="background:#ffff00"></div><div style="background:#ffff00"></div><div style="background:#fffb00"></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#ff4300"></div><div style="background:#fb4100"></div><div style="background:#ed4804"></div><div style="background:#ff4200"></div><div style="background:#0004fd"></div><div style="background:#000ce7"></div><div style="background:#148dff"></div><div style="background:#eefa40"></div><div style="background:#ffff01"></div><div style="background:#fffc00"></div><div style="background:#fffd00"></div><div style="background:#ffff00"></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div style="background:#ec4717"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#ff4204"></div><div style="background:#ff8400"></div><div style="background:#18019a"></div><div style="background:#0600c1"></div><div style="background:#0700db"></div><div style="background:#0006f5"></div><div style="background:#0b7aff"></div><div style="background:#0000ef"></div><div style="background:#e5f84e"></div><div style="background:#fff516"></div><div style="background:#fdff01"></div><div style="background:#ffff00"></div><div style="background:#fefa01"></div><div></div><div></div><div></div>
+      <div></div><div></div><div style="background:#ec470f"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#ff8908"></div><div style="background:#1100ce"></div><div style="background:#0003c4"></div><div style="background:#0301fa"></div><div style="background:#0300f4"></div><div style="background:#0000d1"></div><div style="background:#0100fb"></div><div style="background:#0200fb"></div><div style="background:#0100f3"></div><div style="background:#f68a00"></div><div style="background:#d89c00"></div><div style="background:#fff900"></div><div style="background:#fc8600"></div><div style="background:#fdffc7"></div><div></div><div></div>
+      <div></div><div></div><div style="background:#be0ce8"></div><div style="background:#fa4101"></div><div style="background:#fc4400"></div><div style="background:#ff4400"></div><div style="background:#f44a00"></div><div style="background:#0001ca"></div><div style="background:#0000cc"></div><div style="background:#0000ce"></div><div style="background:#0000ce"></div><div style="background:#0700fc"></div><div style="background:#0000d2"></div><div style="background:#0300f6"></div><div style="background:#0000fd"></div><div style="background:#f48d00"></div><div style="background:#ff8800"></div><div style="background:#fff505"></div><div style="background:#ff8900"></div><div style="background:#ffffd7"></div><div></div><div></div>
+      <div></div><div></div><div style="background:#bc08ef"></div><div style="background:#f33944"></div><div style="background:#ff4500"></div><div style="background:#ff4400"></div><div style="background:#ff4101"></div><div style="background:#ff400d"></div><div style="background:#e68467"></div><div style="background:#e2876a"></div><div style="background:#e2876a"></div><div style="background:#e38e71"></div><div style="background:#0001c8"></div><div style="background:#0001ca"></div><div style="background:#0000d5"></div><div style="background:#f48d00"></div><div style="background:#ff8800"></div><div style="background:#f88b00"></div><div style="background:#ffe917"></div><div style="background:#ffffd3"></div><div></div><div></div>
+      <div></div><div></div><div style="background:#ffb3ff"></div><div style="background:#f84139"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#fd4500"></div><div style="background:#ff6a0a"></div><div style="background:#ff6109"></div><div style="background:#8c4855"></div><div style="background:#8d4e6b"></div><div style="background:#0000cc"></div><div style="background:#0000ce"></div><div style="background:#f5bb2b"></div><div style="background:#fb8a00"></div><div style="background:#ffc712"></div><div style="background:#ff8602"></div><div style="background:#ff8600"></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div style="background:#fe3c44"></div><div style="background:#f94717"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#ff4300"></div><div style="background:#0200b2"></div><div style="background:#0001c8"></div><div style="background:#0103ca"></div><div style="background:#0000da"></div><div style="background:#0100ce"></div><div style="background:#321685"></div><div style="background:#ff8500"></div><div style="background:#ff8500"></div><div style="background:#ff8403"></div><div style="background:#ffe81c"></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div style="background:#fc3e30"></div><div style="background:#fb4200"></div><div style="background:#ff4500"></div><div style="background:#ff4400"></div><div style="background:#ff4301"></div><div style="background:#fb4700"></div><div style="background:#1200a6"></div><div style="background:#0203c0"></div><div style="background:#0002ce"></div><div style="background:#ff8600"></div><div style="background:#ff8900"></div><div style="background:#ff8800"></div><div style="background:#ff8800"></div><div style="background:#ff8800"></div><div style="background:#f84800"></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div style="background:#ad0dd1"></div><div style="background:#fd3b31"></div><div style="background:#fb4515"></div><div style="background:#ff4300"></div><div style="background:#ff4400"></div><div style="background:#ff4200"></div><div style="background:#f84800"></div><div style="background:#ff4402"></div><div style="background:#f74600"></div><div style="background:#ff8605"></div><div style="background:#ff8f0a"></div><div style="background:#fd8900"></div><div style="background:#ff8900"></div><div style="background:#ff8800"></div><div style="background:#ff8300"></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div style="background:#c808e5"></div><div style="background:#ff4600"></div><div style="background:#fc4408"></div><div style="background:#ff4304"></div><div style="background:#fc4501"></div><div style="background:#fd4500"></div><div style="background:#ff7a0e"></div><div style="background:#fe4600"></div><div style="background:#ff4000"></div><div style="background:#ff8e01"></div><div style="background:#ff7f09"></div><div style="background:#ff8800"></div><div style="background:#f98909"></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div style="background:#c207de"></div><div style="background:#cc08f0"></div><div style="background:#fe4504"></div><div style="background:#fd4600"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#ff4400"></div><div style="background:#f94e00"></div><div style="background:#c610b0"></div><div style="background:#c606e5"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div style="background:#ff4400"></div><div style="background:#fc4600"></div><div style="background:#ff4500"></div><div style="background:#fd4500"></div><div style="background:#ff4400"></div><div style="background:#ff4500"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+  <div class="ff-right">
+    <span class="f1">FIREFOX</span>
+    <span class="f2">GET IT NOW</span>
+  </div>
+</div>
+</body>
+</html>

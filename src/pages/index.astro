@@ -61,25 +61,14 @@ import Layout from "../layouts/Layout.astro";
   <section class="mt-16">
     <div class="flex flex-wrap gap-1">
       {[
-        { src: "coffee.gif", alt: "coffee" },
-        { src: "coffeecup.gif", alt: "coffee cup" },
-        { src: "gf.gif", alt: "girlfriend" },
-        { src: "5amgirlfriend.gif", alt: "5am girlfriend" },
-        { src: "love.gif", alt: "love" },
-        { src: "heart.gif", alt: "heart" },
         { src: "javascript.gif", alt: "javascript" },
         { src: "html5.png", alt: "html5" },
         { src: "css.gif", alt: "css" },
-        { src: "code.gif", alt: "code" },
         { src: "discord.gif", alt: "discord" },
-        { src: "linux.gif", alt: "linux" },
-        { src: "archlinux.gif", alt: "arch linux" },
         { src: "gnu-linux.gif", alt: "gnu/linux" },
-        { src: "vim.gif", alt: "vim" },
-        { src: "neovim.gif", alt: "neovim" },
         { src: "www.gif", alt: "www" },
         { src: "best_viewed_with_open_eyes.gif", alt: "best viewed with open eyes" },
-        { src: "catscape3.gif", alt: "catscape" },
+        { src: "button316.png", alt: "button 316" },
       ].map((btn) => (
         <img
           src={`/buttons/${btn.src}`}
@@ -90,6 +79,33 @@ import Layout from "../layouts/Layout.astro";
           class="image-rendering-pixelated"
         />
       ))}
+      <iframe
+        src="/buttons/claudecode.html"
+        title="Claude Code"
+        width="88"
+        height="31"
+        style="border:none; overflow:hidden; display:block;"
+        scrolling="no"
+        loading="lazy"
+      />
+      <iframe
+        src="/buttons/monster.html"
+        title="Monster Energy Ultra Rosa"
+        width="88"
+        height="31"
+        style="border:none; overflow:hidden; display:block;"
+        scrolling="no"
+        loading="lazy"
+      />
+      <iframe
+        src="/buttons/firefox.html"
+        title="Firefox"
+        width="88"
+        height="31"
+        style="border:none; overflow:hidden; display:block;"
+        scrolling="no"
+        loading="lazy"
+      />
     </div>
   </section>
 </Layout>
