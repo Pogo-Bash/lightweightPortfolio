@@ -1,0 +1,18 @@
+[Unit]
+Description=Ghost Chat Signaling Server
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/lightweightPortfolio/server
+EnvironmentFile=/home/ubuntu/lightweightPortfolio/server/.env
+Environment=PORT=3002
+ExecStart=/usr/bin/node dist/index.js
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
